@@ -1,0 +1,29 @@
+{
+  "name": "jira-tm4j-integration-sample",
+  "version": "1.0.0",
+  "description": "Exemplo de Integração com a API TM4J",
+  "config": {
+    "jira_host": "jira host",
+    "jira_username": "jira username",
+    "jira_password": "jira encrypted password",
+    "secret_key": "yoursecretkey",
+    "jira_send_results": false
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jira": "cross-env JIRA_HOST=$npm_package_config_jira_host JIRA_USERNAME=$npm_package_config_jira_username JIRA_PASSWORD=$npm_package_config_jira_password SECRET_KEY=$npm_package_config_secret_key JIRA_SEND_RESULTS=$npm_package_config_jira_send_results node scripts/seuRunner.js"
+  },
+  "keywords": [
+    "jira",
+    "tm4j",
+    "integration",
+    "automated-tests"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^6.0.3",
+    "node-fetch": "^2.6.0",
+    "simple-crypto-js": "^2.2.0"
+  }
+}
